@@ -33,7 +33,7 @@ var app = http.createServer(function(request,response){
             var title = queryData.id;
             var sanitizedTitle = sanitizeHtml(title);
             var sanitizedDescription = sanitizeHtml(description, {
-              allowedTags['h1']
+              allowedTags:['h1']
             });
             var list = template.List(filelist);
             var html = template.HTML(title, list,
